@@ -1,0 +1,308 @@
+body {
+  background-image: url('./components/assets/background\ 1.png');
+  background-size: cover; /* cover */
+  /* background-position: center; center */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* src/components/HomePage/HomePage.css */
+.container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 4rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: #F2F2F2;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.admin-portal {
+  position: absolute;
+  width: 260px;
+  height: 75px;
+  left: 47px;
+  top: 43px;
+  background: #F2F2F2;
+  border: none;
+  border-radius: 73px;
+  padding: 8px 1px 9px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: lighter;
+  box-shadow: 0 6px 22.7px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black; /* color for the text */
+  text-decoration: none; /* removes underline for the Link */
+}
+
+.admin-portal:hover {
+  background-color: rgba(128, 128, 128, 0.9); /* less transparent grey */
+  transform: scale(1.05);
+}
+
+.admin-portal:active {
+  background-color: rgb(131, 127, 127); /* opaque grey */
+  transform: scale(1);
+}
+
+.admin-portal .main-text {
+  font-size: 1.5rem; /* larger text for Admin Portal */
+  margin: 0; /* remove margin */
+  font-weight: 600;
+  font-family: inter;
+}
+
+.admin-portal .sub-text {
+  font-size: 1rem; /* smaller text for Sign in Here */
+  margin: 0; /* remove margin */
+  font-weight: 400;
+  font-family: inter;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+/* src/components/SignInForm/SignInForm.css */
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in-form h2 {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 400px; /* Larger width */
+  padding: 25px; /* Larger padding */
+  margin: 10px; /* Larger margin */
+  border: none;
+  border-radius: 75px; /* Round corners */
+  font-size: 1.2rem; /* Larger font size */
+  background-color: rgba(128, 128, 128, 0.5); /* Slightly transparent grey */
+  color: white;
+  outline: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: #ddd;
+}
+
+.input-field:focus {
+  background-color: rgba(128, 128, 128, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-in-button {
+  width: 200px;
+  padding: 15px 30px; /* Increased size */
+  border: none;
+  border-radius: 25px; /* Round corners */
+  background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent background */
+  color: white;
+  font-size: 1.2rem; /* Larger text size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.sign-in-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sign-in-button:active {
+  background-color: rgba(0, 0, 0, 0.9); /* Even darker on click */
+  transform: scale(1); /* Return to original size */
+}
+
+.register-link {
+  color: #007bff; /* Bootstrap primary color */
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.register-link:hover {
+  color: #0056b3; /* Darker shade of the primary color */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* src/components/RegistrationForm/RegistrationForm.css */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-form h2 {
+  margin-bottom: 20px;
+}
+
+/* .input-field {
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+} */
+
+.signin-link {
+  color: #007bff; /* Bootstrap primary color */
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.signin-link:hover {
+  color: #0056b3; /* Darker shade of the primary color */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Media query for MacBook Pro 14" screen */
+@media (min-width: 3024px) and (min-height: 1964px) {
+  body {
+    background-size: 1512px 982px;
+  }
+
+  .admin-portal {
+    width: 400px;
+    height: 90px;
+    font-size: 1.2rem;
+  }
+
+  .admin-portal .main-text {
+    font-size: 2rem;
+  }
+
+  .admin-portal .sub-text {
+    font-size: 1.2rem;
+  }
+
+  .sign-in-form .input-field {
+    width: 500px;
+    padding: 20px;
+    font-size: 1.4rem;
+  }
+
+  .sign-in-button {
+    padding: 20px 40px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Media query for other responsive adjustments */
+@media (max-width: 1440px) {
+ 
+
+  .admin-portal {
+    width: 250px;
+    height: 60px;
+    font-size: 0.9rem;
+  }
+
+  .admin-portal .main-text {
+    font-size: 1.2rem;
+  }
+
+  .admin-portal .sub-text {
+    font-size: 0.8rem;
+  }
+
+  .sign-in-form .input-field {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .sign-in-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Additional media queries for other screen sizes */
+@media (max-width: 1024px) {
+  .admin-portal {
+    width: 200px;
+    height: 50px;
+    font-size: 0.8rem;
+  }
+
+  .admin-portal .main-text {
+    font-size: 1rem;
+  }
+
+  .admin-portal .sub-text {
+    font-size: 0.7rem;
+  }
+
+  .sign-in-form .input-field {
+    width: 250px;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .sign-in-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-portal {
+    width: 150px;
+    height: 45px;
+    font-size: 0.7rem;
+  }
+
+  .admin-portal .main-text {
+    font-size: 0.9rem;
+  }
+
+  .admin-portal .sub-text {
+    font-size: 0.6rem;
+  }
+
+  .sign-in-form .input-field {
+    width: 200px;
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .sign-in-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
